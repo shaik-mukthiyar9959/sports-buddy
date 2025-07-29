@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h1>User Dashboard</h1>
+    <p>Welcome, <span id="userEmail"></span></p>
+    <button id="logoutBtn">Logout</button>
+
+    <hr style="margin: 20px 0;" />
+
+    <h3>Add New Sport Event</h3>
+    <form id="eventForm">
+      <input type="text" id="sportName" placeholder="Sport Name" required />
+      <input type="text" id="location" placeholder="Location" required />
+      <input type="date" id="eventDate" required />
+      <button type="submit">Add Event</button>
+    </form>
+
+    <h3 style="margin-top: 30px;">Your Events</h3>
+    <ul id="event-list"></ul>
+  </div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
